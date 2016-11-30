@@ -1,0 +1,475 @@
+
+/*
+Values That Might have to be Changed
+background color: white
+inactive link: #66666e
+dark: #0a0908
+gold: #ffead0
+
+
+Dark Blue: #1d1e2c;
+Light Gray: #59656f;
+purple: #3b1f2b;
+
+*/
+
+ 
+/*#testSquare {
+  background-color: blue;
+  opacity: 0.4;
+  position: absolute;
+  top: 714;
+  
+  left: 207;
+  
+  z-index: 100;
+}*/
+
+/*top: 714px;
+  left: 641px;
+  right: 107.141px;
+  bottom: 413.844px;*/
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0em;
+  /*font-family: 'Raleway', sans-serif;*/
+  font-family: 'Lato', sans-serif;
+
+
+  /*font-family: 'Roboto', sans-serif;*/
+}
+
+/* MENU BAR */
+.menu {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: white;
+  padding-top: 2%;
+  padding-bottom: 1%;
+  z-index: 20;
+
+  /*opacity: .9;*/
+}
+
+.menu a {
+  transition: .3s;
+  font-size: 2vh
+}
+
+.menu a:link, .menu a:visited {
+  text-decoration: none;
+  color: #59656f;
+}
+
+.menu a:hover {
+  text-decoration: none;
+  color: #db162f;
+}
+
+.menu a:active {
+  text-decoration: none;
+  color: #db162f;
+}
+
+
+/* ABOUT PANEL */
+#about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertically aligns items */
+  align-items: center; /* horizontally aligns items */
+
+/*NEED TO MAKE CROSS COMPATIBLE
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+*/
+
+
+  
+  height: 96%;
+
+  /*position: relative;*/
+  overflow: hidden;
+
+  background-image: url("images/profile6.jpeg");
+  /*background-repeat: no-repeat;*/
+  /*background-position: center;*/
+  background-size: cover;
+}
+
+#vid {
+  width: 80%;
+}
+
+#about h1 {
+  z-index: 1;
+  color: white;
+  text-align:left;
+
+  font-size: 7vh;
+}
+
+#about h3 {
+  color: white;
+  text-align:left;
+
+  font-size: 2vh;
+}
+
+#about h2, #about a {
+  color: white;
+  /*width: 60%;*/
+  text-align:left;
+  z-index: 1;
+
+  font-size: 2.5vh
+  
+
+  /*text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;*/
+}
+
+/*#about img {
+  position: absolute;
+  z-index: 0;
+  opacity: 0.3;
+  left: 0px;
+  right: 0px;
+}*/
+
+/* VISUAL */
+#visual {
+
+
+
+  /*should allow centering properly but needs tuning*/
+  /*background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;*/ /* horizontally aligns items */
+
+}
+
+/*Also needed for centering but needs tuning*/
+/*#insideVisual {
+  width: 80%;
+}*/
+
+.imagePanel {
+  display: inline-block;
+  /*position: relative;*/
+  margin: 10px;
+
+  vertical-align: top;
+}
+
+.imagePanel .text {
+  padding-top: 5px;
+  width: 300px;
+  /*display: inline-block;*/
+}
+
+.imagePanel .title { 
+  color: #1d1e2c;
+  font-weight: 900;
+  display: inline;
+}
+
+.imagePanel .author {
+  color: #59656f;
+  display: inline;
+}
+
+.imagePanel .description {
+  color: #59656f;
+  text-align: left;
+  display: none;
+}
+
+.imagePanel a {
+  color: #59656f;
+}
+
+.imageContainer {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  transition: 1.4s;
+  position: relative;
+
+
+  /*display: inline-block;
+  vertical-align: top;*/
+}
+
+.imageContainer img {
+  /*width: 100%;
+  height: auto;*/
+  transition: 1.4s;
+
+  position: absolute;
+  top: -9999px;
+  bottom: -9999px;
+  left: -9999px;
+  right: -9999px;
+  margin: auto;
+
+  z-index: 0;
+}
+
+.close {
+  position: absolute;
+  top: -10px;
+  left: 0px;
+  color: #ffead0;
+  font-size: 2.4em;
+
+  opacity:.5;
+
+  background-color: Transparent;
+  border: none;
+  cursor:pointer;
+  display: none;
+
+  z-index: 10;
+
+  /*transition: 1.4s;*/
+/*  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer; */
+}
+
+.close:hover {
+  opacity:.85;
+}
+
+.close:focus {
+  outline:none;
+  opacity:1;
+}
+
+/*div.imagePanel:hover .imageContainer {
+  opacity: 0.5;
+  background-color: #ffead0;
+  width: 120%;
+}*/
+
+/*div.imagePanel:hover .imageContainer img {
+  width: 105%;
+}*/
+
+
+
+.imageBlurb {
+  position: absolute;
+  width: 280px;
+  max-height: 280px;
+  overflow: scroll;
+  background-color: white;
+  display: none;
+}
+
+.imageBlurb .title { 
+  font-size: 25px;
+  text-align: center;
+}
+
+.imageBlurb .author {
+  color: #66666e;
+  font-size: 12px;
+  text-align: center;
+}
+
+.imageBlurb .description {
+  color: #66666e;
+  text-align: left;
+  font-size: 15px;
+}
+
+
+/* What this does is set the scrollbar to none, 
+and then manually creates something to look 
+like a scrollbar that will be always visisble!*/
+.imageBlurb::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.imageBlurb::-webkit-scrollbar:vertical {
+    width: 11px;
+}
+
+.imageBlurb::-webkit-scrollbar:horizontal {
+    height: 11px;
+}
+
+.imageBlurb::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    border: 2px solid white; /* should match background, can't be transparent */
+    background-color: rgba(0, 0, 0, .5);
+}
+
+
+/*
+.image {
+  width: 400px;
+  height: 400px;
+  background-image: url('images/spider.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: 1px solid red;
+}*/
+
+
+#join {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertically aligns items */
+  align-items: center; /* horizontally aligns items */
+
+/*NEED TO MAKE CROSS COMPATIBLE
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+*/
+
+
+  background-color: white;
+  height: 100%;
+}
+
+#join h4, #join a {
+  color: #66666e;
+  width: 60%;
+}
+
+
+
+
+
+.credits {
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: #0a0908;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  color: white;
+}
+
+
+
+
+
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0em;
+	padding: 0em;
+  /*font-family: 'Roboto-light', sans-serif;*/
+}
+
+p, ol, ul {
+	font-size: .8em;
+}
+
+ul {
+	list-style-type: circle;
+	margin: 0em;
+	padding-left: 30%;
+	list-style: none;
+	text-align: left;
+}
+
+
+
+.header {
+	/*margin: 0em 0em 1em 0em; 
+	padding: 6em 1em;*/
+  /*margin: 0em 0em .3em 0em;*/
+  transition: 1.4s;
+  padding: 10%;
+  padding-top: 15%;
+  padding-bottom: 15%;
+}
+
+.header h1 {
+	margin: 0em;
+	padding: 0em;
+	color: #FFFFFF;
+  transition: 1.4s;
+  font-size: 2em;
+}
+
+.header h2 {
+	margin: 0em;
+	padding: 0em;
+	font-size: 1em;
+	color: #FFFFFF;
+  transition: 1.4s;
+}
+
+.header a {
+  font-size: 1em;
+  color: #FFFFFF;
+}
+
+/*a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
+}*/
+
+#start {
+  position: fixed;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  background-color: #551414;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+#hellooo {
+  background-color: #650D1B;
+  padding-top: 30%;
+  padding-bottom: 30%;
+}
+
+#my {
+  background-color: #823200;
+  padding-top: 30%;
+  padding-bottom: 30%;
+}
+
+#bub {
+  background-color: #9B3D12;
+  padding-top: 30%;
+  padding-bottom: 30%;
+}
+
